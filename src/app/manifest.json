@@ -1,0 +1,59 @@
+{
+  "name": "Seikhlasnya",
+  "short_name": "Seikhlasnya",
+  "description": "Aplikasi donasi digital",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/images/logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/logo-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-portrait-1.png",
+      "type": "image/png",
+      "sizes": "1080x1920",
+      "platform": "mobile"
+    },
+    {
+      "src": "/assets/images/screenshot-portrait-2.png",
+      "type": "image/png",
+      "sizes": "1080x1920",
+      "platform": "mobile"
+    },
+    {
+      "src": "/assets/images/screenshot-portrait-3.png",
+      "type": "image/png",
+      "sizes": "1080x1920",
+      "platform": "mobile"
+    },
+    {
+      "src": "/assets/images/screenshot-landscape-1.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "platform": "desktop"
+    },
+    {
+      "src": "/assets/images/screenshot-landscape-2.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "platform": "desktop"
+    },
+    {
+      "src": "/assets/images/screenshot-landscape-3.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "platform": "desktop"
+    }
+  ]
+}

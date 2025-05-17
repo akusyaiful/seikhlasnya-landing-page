@@ -1,0 +1,26 @@
+export const colorTokens = {
+  brand: {
+    black: { value: '#404041' },
+    blue: { value: '#1A8FE3' },
+    blueDarker: { value: '#1875b8' },
+    blueLighter: { value: '#69baf5' },
+    grayDark: { value: '#686868' },
+    gray: { value: '#cccccc' },
+    grayLight: { value: '#F7F8F8' },
+    grayLighter: { value: '#F8F9FA' },
+    green: { value: '#65b32b' },
+    red: { value: '#ED2B2A' },
+    white: { value: '#ffffff' },
+    yellow: { value: '#ECC12A' },
+  },
+  status: {
+    gray: { value: '#bababa' },
+    grayBg: { value: 'rgba(246, 246, 246, 0.8)' },
+    green: { value: '#65b32b' },
+    greenBg: { value: 'rgba(121, 192, 67, 0.2)' },
+    red: { value: '#de4847' },
+    redBg: { value: 'rgba(237, 43, 42, 0.2)' },
+    yellow: { value: '#ecc12a' },
+    yellowBg: { value: 'rgba(236, 193, 42, 0.1)' },
+  },
+};
