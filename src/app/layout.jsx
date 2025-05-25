@@ -1,11 +1,6 @@
 import { Poppins } from "next/font/google";
-import "@/app/globals.css";
+import "./globals.css";
 import AppProvider from "@/components/common/AppProvider";
-import Layout from "@/components/client/Container";
-import Container from "@/components/client/Container";
-import { Suspense } from "react";
-import NProgressProvider from "@/components/common/NprogressProvider";
-import MetaThemeColor from "@/components/common/MetaThemeColor";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -29,16 +24,8 @@ const RootLayout = ({ children }) => {
   return (
     <html suppressHydrationWarning={false}>
       <body className={poppins.variable}>
-        <Suspense>
-          <NProgressProvider />
-        </Suspense>
-        <MetaThemeColor />
         <AppProvider>
-          <Layout>
-            <Container>
-              <main>{children}</main>
-            </Container>
-          </Layout>
+          <main>{children}</main>
         </AppProvider>
       </body>
     </html>
