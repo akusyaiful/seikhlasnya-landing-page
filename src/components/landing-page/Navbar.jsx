@@ -3,8 +3,11 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
+
   return (
     <Box
       w="full"
@@ -35,10 +38,12 @@ const Navbar = () => {
           </Link>
         </Flex>
         <Button
-          type="submit"
           size={{ base: "md", md: "lg" }}
           fontWeight={"semibold"}
           colorPalette={"brand.blue"}
+          onClick={() => {
+            window.open("https://seikhlasnya.vercel.app/", "_blank");
+          }}
         >
           Donasi Sekarang
         </Button>

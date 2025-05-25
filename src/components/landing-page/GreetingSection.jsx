@@ -20,10 +20,12 @@ const GreetingSection = () => {
             gravida interdum fringilla massa cum.
           </Text>
           <Button
-            type="submit"
             size={{ base: "md", md: "lg" }}
             fontWeight={"semibold"}
             colorPalette={"brand.blue"}
+            onClick={() => {
+              window.open("https://seikhlasnya.vercel.app/", "_blank");
+            }}
           >
             Donasi Sekarang
           </Button>
