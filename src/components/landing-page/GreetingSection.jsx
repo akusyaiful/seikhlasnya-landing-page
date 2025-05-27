@@ -6,6 +6,27 @@ import Image from "next/image";
 const GreetingSection = () => {
   return (
     <Box w="80vw" bg={"brand.white"} pt={24}>
+      <Image
+        width={100}
+        height={100}
+        src="/assets/images/ellipse1.svg"
+        alt="logo"
+        style={{ position: "absolute", left: 0 }}
+      />
+      <Image
+        width={100}
+        height={100}
+        src="/assets/images/ellipse2.svg"
+        alt="logo"
+        style={{ position: "absolute", left: 40, bottom: 20 }}
+      />
+      <Image
+        width={100}
+        height={100}
+        src="/assets/images/ellipse3.svg"
+        alt="logo"
+        style={{ position: "absolute", right: 100, bottom: 100 }}
+      />
       <Flex justifyContent={"space-between"} alignItems={"center"}>
         <Box>
           <Text fontWeight={"bold"} fontSize={70} mb={16}>

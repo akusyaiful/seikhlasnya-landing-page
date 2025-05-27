@@ -1,0 +1,16 @@
+<svg width="137" height="319" viewBox="0 0 137 319" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3" filter="url(#filter0_f_10_62)">
+<g clip-path="url(#paint0_diamond_10_62_clip_path)" data-figma-skip-parse="true"><g transform="matrix(-0.137624 0.110583 -0.110583 -0.137624 48.9617 138.47)"><rect x="0" y="0" width="1164.46" height="933.47" fill="url(#paint0_diamond_10_62)" opacity="1" shape-rendering="crispEdges"/><rect x="0" y="0" width="1164.46" height="933.47" transform="scale(1 -1)" fill="url(#paint0_diamond_10_62)" opacity="1" shape-rendering="crispEdges"/><rect x="0" y="0" width="1164.46" height="933.47" transform="scale(-1 1)" fill="url(#paint0_diamond_10_62)" opacity="1" shape-rendering="crispEdges"/><rect x="0" y="0" width="1164.46" height="933.47" transform="scale(-1)" fill="url(#paint0_diamond_10_62)" opacity="1" shape-rendering="crispEdges"/></g></g><circle cx="-22.2852" cy="159.715" r="111.298" transform="rotate(36.6119 -22.2852 159.715)" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_DIAMOND&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.90409445762634277,&#34;g&#34;:0.80612379312515259,&#34;b&#34;:0.29177749156951904,&#34;a&#34;:1.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:0.90196079015731812,&#34;g&#34;:0.26666668057441711,&#34;b&#34;:0.40392157435417175,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;stopsVar&#34;:[],&#34;transform&#34;:{&#34;m00&#34;:-275.24740600585938,&#34;m01&#34;:-221.16598510742188,&#34;m02&#34;:297.16836547851562,&#34;m10&#34;:221.16598510742188,&#34;m11&#34;:-275.24740600585938,&#34;m12&#34;:165.5104980468750},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}"/>
+</g>
+<defs>
+<filter id="filter0_f_10_62" x="-181.289" y="0.711296" width="318.007" height="318.007" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="23.8495" result="effect1_foregroundBlur_10_62"/>
+</filter>
+<clipPath id="paint0_diamond_10_62_clip_path"><circle cx="-22.2852" cy="159.715" r="111.298" transform="rotate(36.6119 -22.2852 159.715)"/></clipPath><linearGradient id="paint0_diamond_10_62" x1="0" y1="0" x2="500" y2="500" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E7CE4A"/>
+<stop offset="1" stop-color="#E64467"/>
+</linearGradient>
+</defs>
+</svg>
