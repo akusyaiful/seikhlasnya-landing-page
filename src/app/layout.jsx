@@ -1,6 +1,6 @@
+import AppProvider from "@/components/common/AppProvider";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import AppProvider from "@/components/common/AppProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",

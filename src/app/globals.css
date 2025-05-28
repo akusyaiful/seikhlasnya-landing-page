@@ -1,5 +1,6 @@
 :root {
-  font-family: 'Poppins';
+  font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 
 #nprogress {

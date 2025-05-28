@@ -3,10 +3,14 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const Navbar = () => {
-  const router = useRouter();
+  const [selectedMenu, setSelectedMenu] = useState("home");
+
+  const handleSelectMenu = (menu) => {
+    setSelectedMenu(menu);
+  };
 
   return (
     <Box
@@ -15,6 +19,7 @@ const Navbar = () => {
       position={"fixed"}
       bg={"brand.white"}
       top={0}
+      zIndex={99}
     >
       <Flex justifyContent={"space-around"} alignItems={"center"}>
         <Image
@@ -24,17 +29,57 @@ const Navbar = () => {
           alt="logo"
         />
         <Flex justifyContent={"space-between"} alignItems={"center"}>
-          <Link href={"/"} style={{ padding: "0px 24px" }}>
+          <Link
+            href={"#home"}
+            style={{
+              padding: "0px 24px",
+              color:
+                selectedMenu === "home"
+                  ? "var(--se-colors-brand-blue)"
+                  : "black",
+            }}
+            onClick={() => handleSelectMenu("home")}
+          >
             Home
           </Link>
-          <Link href={"/"} style={{ padding: "0px 24px" }}>
+          <Link
+            href={"#about-us"}
+            style={{
+              padding: "0px 24px",
+              color:
+                selectedMenu === "about-us"
+                  ? "var(--se-colors-brand-blue)"
+                  : "black",
+            }}
+            onClick={() => handleSelectMenu("about-us")}
+          >
             About
           </Link>
-          <Link href={"/"} style={{ padding: "0px 24px" }}>
+          <Link
+            href={"#activity"}
+            style={{
+              padding: "0px 24px",
+              color:
+                selectedMenu === "activity"
+                  ? "var(--se-colors-brand-blue)"
+                  : "black",
+            }}
+            onClick={() => handleSelectMenu("activity")}
+          >
             Activity
           </Link>
-          <Link href={"/"} style={{ padding: "0px 24px" }}>
-            Donation
+          <Link
+            href={"#contact"}
+            style={{
+              padding: "0px 24px",
+              color:
+                selectedMenu === "contact"
+                  ? "var(--se-colors-brand-blue)"
+                  : "black",
+            }}
+            onClick={() => handleSelectMenu("contact")}
+          >
+            Contact
           </Link>
         </Flex>
         <Button
