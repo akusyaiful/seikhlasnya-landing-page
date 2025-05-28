@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import ActivityCard from "./ActivityCard";
 
 const ActivitySection = () => {
@@ -45,6 +45,7 @@ const ActivitySection = () => {
         alignItems={"center"}
         mt={16}
         gap={32}
+        flexDirection={{ lg: "row", base: "column" }}
       >
         <Box>
           <Text fontSize={32} fontWeight={700}>
@@ -64,11 +65,16 @@ const ActivitySection = () => {
           objectFit="cover"
         />
       </Flex>
-      <HStack gap={16} align="stretch" mt={16}>
+      <Stack
+        gap={{ base: 8, lg: 16 }}
+        align="stretch"
+        mt={16}
+        direction={{ base: "column", md: "row" }}
+      >
         {dummyCards.map((card, i) => (
           <ActivityCard key={i} {...card} />
         ))}
-      </HStack>
+      </Stack>
     </Box>
   );
 };

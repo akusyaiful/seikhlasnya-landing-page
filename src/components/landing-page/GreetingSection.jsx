@@ -29,15 +29,27 @@ const GreetingSection = () => {
       />
       <Flex justifyContent={"center"}>
         <Box w="80vw">
-          <Flex justifyContent={"space-between"} alignItems={"center"}>
-            <Box>
-              <Text fontWeight={"bold"} fontSize={70} mb={16}>
+          <Flex
+            justifyContent={"space-between"}
+            alignItems={"center"}
+            flexDirection={{ lg: "row", base: "column" }}
+          >
+            <Box textAlign={{ lg: "left", base: "center" }}>
+              <Text
+                fontWeight={"bold"}
+                fontSize={{ base: 42, md: 70 }}
+                mb={{ base: 8, md: 16 }}
+              >
                 Donating is about making a{" "}
                 <Text as="span" color="brand.blue">
                   Differene.
                 </Text>
               </Text>
-              <Text fontSize={24} color="brand.grayDark" mb={16}>
+              <Text
+                fontSize={{ base: 16, md: 24 }}
+                color="brand.grayDark"
+                mb={{ base: 8, md: 16 }}
+              >
                 Eu viverra erat fusce tortor cum libero, pharetra. Nunc cursus
                 cursus odio convallis aliquam in nunc. Commodo ultrices massa
                 urna gravida interdum fringilla massa cum.

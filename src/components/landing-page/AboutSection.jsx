@@ -8,8 +8,17 @@ const AboutSection = () => {
       <Text fontWeight={"bold"} color="brand.blue" fontSize={20}>
         About Us
       </Text>
-      <Flex justifyContent={"space-between"} alignItems={"center"}>
-        <Text fontWeight={"bold"} fontSize={50} w="60%">
+      <Flex
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        flexDirection={{ lg: "row", base: "column" }}
+      >
+        <Text
+          fontWeight={"bold"}
+          fontSize={{ base: 38, md: 50 }}
+          w={{ base: "full", lg: "60%" }}
+          mb={{ base: 8, lg: 0 }}
+        >
           We are here to support{" "}
           <Text as={"span"} color="brand.blue">
             vulnerable

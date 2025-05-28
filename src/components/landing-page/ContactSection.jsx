@@ -37,7 +37,11 @@ const ContactSection = () => {
 
   return (
     <Box id="contact" py={24} w="80vw" bg={"brand.white"}>
-      <Flex justifyContent={"space-between"} alignItems={"center"}>
+      <Flex
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        flexDirection={{ lg: "row", base: "column" }}
+      >
         <Image src="/assets/images/contact-image1.jpg" w={550} />
         <Box>
           <Text color="brand.blue" fontSize={50} fontWeight="bold">

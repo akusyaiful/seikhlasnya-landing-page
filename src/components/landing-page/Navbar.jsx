@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Button, Flex } from "@chakra-ui/react";
+import { AlignJustifyIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -21,14 +22,22 @@ const Navbar = () => {
       top={0}
       zIndex={99}
     >
-      <Flex justifyContent={"space-around"} alignItems={"center"}>
+      <Flex
+        justifyContent={{ base: "space-between", md: "space-around" }}
+        alignItems={"center"}
+        px={{ base: 8, md: 0 }}
+      >
         <Image
           width={70}
           height={70}
           src="/assets/images/logo.png"
           alt="logo"
         />
-        <Flex justifyContent={"space-between"} alignItems={"center"}>
+        <Flex
+          justifyContent={"space-between"}
+          alignItems={"center"}
+          display={{ base: "none", md: "flex" }}
+        >
           <Link
             href={"#home"}
             style={{
@@ -89,8 +98,17 @@ const Navbar = () => {
           onClick={() => {
             window.open("https://seikhlasnya.vercel.app/", "_blank");
           }}
+          display={{ base: "none", md: "block" }}
         >
           Donasi Sekarang
+        </Button>
+        <Button
+          display={{ base: "flex", md: "none" }}
+          w="40px"
+          colorPalette={"brand.blue"}
+          borderRadius="50%"
+        >
+          <AlignJustifyIcon />
         </Button>
       </Flex>
     </Box>
