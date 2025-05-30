@@ -9,29 +9,30 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { Heart, MapPin, HandHeart, User } from "lucide-react";
+import { HandHeart, Heart, MessageCircleQuestion, User } from "lucide-react";
 
 const ContactSection = () => {
   const dummyCategories = [
     {
       icon: Heart,
-      title: "Category 1",
-      description: "Mattis et aliquam fermentum sed sagittis eu elit mauris.",
+      title: "Donasi",
+      description: "Salurkan donasimu kepada berbagai lembaga.",
     },
     {
-      icon: MapPin,
-      title: "Category 2",
-      description: "Mattis et aliquam fermentum sed sagittis eu elit mauris.",
+      icon: MessageCircleQuestion,
+      title: "Tanya AI",
+      description: "Selalu siap memandumu seputar donasi.",
     },
     {
       icon: HandHeart,
-      title: "Category 3",
-      description: "Mattis et aliquam fermentum sed sagittis eu elit mauris.",
+      title: "Aktivitas",
+      description: "Dapatkan informasi aktual dari lembaga donasi.",
     },
     {
       icon: User,
-      title: "Category 4",
-      description: "Mattis et aliquam fermentum sed sagittis eu elit mauris.",
+      title: "Profil Donatur",
+      description:
+        "Atur informasi pribadi dan riwayat donasimu dengan mudah dan aman.",
     },
   ];
 
@@ -40,26 +41,26 @@ const ContactSection = () => {
       <Flex
         justifyContent={"space-between"}
         alignItems={"center"}
-        flexDirection={{ lg: "row", base: "column" }}
+        flexDirection={{ xl: "row", base: "column" }}
       >
         <Image src="/assets/images/contact-image1.jpg" w={550} />
         <Box>
           <Text color="brand.blue" fontSize={50} fontWeight="bold">
-            Let’s make an impact
+            Wujudkan kebaikan bersama seikhlasnya.
           </Text>
-          <Text color="brand.darkGray" fontSize={18} mt={16}>
-            Mattis et aliquam fermentum sed sagittis eu elit mauris. Nisl eros
-            vel neque vitae lorem molestie.
+          <Text color="brand.grayDark" fontSize={{ base: 16, lg: 20 }} mt={8}>
+            Seikhlasnya memudahkanmu untuk berbagi, menjembatani kebaikan untuk
+            mereka yang membutuhkan.
           </Text>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} mt={16}>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} mt={8}>
             {dummyCategories.map((category, i) => (
               <HStack align="flex-start" key={i} mb={4}>
                 <Icon as={category.icon} boxSize={8} color="brand.blue" />
                 <Box key={i} pl={4}>
-                  <Text fontWeight={700} fontSize={18} mb={2}>
+                  <Text fontWeight={700} fontSize={{ base: 16, lg: 20 }} mb={2}>
                     {category.title}
                   </Text>
-                  <Text>{category.description}</Text>
+                  <Text color="brand.grayDark">{category.description}</Text>
                 </Box>
               </HStack>
             ))}

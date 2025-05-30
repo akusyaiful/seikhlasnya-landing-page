@@ -32,27 +32,31 @@ const GreetingSection = () => {
           <Flex
             justifyContent={"space-between"}
             alignItems={"center"}
-            flexDirection={{ lg: "row", base: "column" }}
+            flexDirection={{ xl: "row", base: "column" }}
           >
             <Box textAlign={{ lg: "left", base: "center" }}>
               <Text
                 fontWeight={"bold"}
-                fontSize={{ base: 42, md: 70 }}
-                mb={{ base: 8, md: 16 }}
+                fontSize={{ base: 36, lg: 64 }}
+                color="brand.blue"
               >
-                Donating is about making a{" "}
-                <Text as="span" color="brand.blue">
-                  Differene.
-                </Text>
+                Seikhlasnya
               </Text>
               <Text
-                fontSize={{ base: 16, md: 24 }}
-                color="brand.grayDark"
-                mb={{ base: 8, md: 16 }}
+                fontWeight={"bold"}
+                fontSize={{ base: 36, lg: 64 }}
+                mb={{ base: 4, md: 8 }}
               >
-                Eu viverra erat fusce tortor cum libero, pharetra. Nunc cursus
-                cursus odio convallis aliquam in nunc. Commodo ultrices massa
-                urna gravida interdum fringilla massa cum.
+                Satu Platform, Beragam Kebaikan.
+              </Text>
+              <Text
+                fontSize={{ base: 16, lg: 20 }}
+                color="brand.grayDark"
+                mb={{ base: 4, md: 8 }}
+              >
+                Kemudahan berdonasi dalam satu tempat. Seikhlasnya hadir sebagai
+                penghubung yang amanah dan terpercaya antara para donatur dan
+                lembaga - lembaga sosial yang profesional dan berdedikasi.
               </Text>
               <Button
                 size={{ base: "md", md: "lg" }}
@@ -66,9 +70,9 @@ const GreetingSection = () => {
               </Button>
             </Box>
             <Image
-              width={600}
-              height={600}
-              src="/assets/images/form-donation.svg"
+              width={1800}
+              height={1800}
+              src="/assets/images/form-donation.png"
               alt="logo"
             />
           </Flex>

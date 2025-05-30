@@ -15,15 +15,14 @@ const AboutSection = () => {
       >
         <Text
           fontWeight={"bold"}
-          fontSize={{ base: 38, md: 50 }}
+          fontSize={{ base: 36, md: 50 }}
           w={{ base: "full", lg: "60%" }}
           mb={{ base: 8, lg: 0 }}
         >
-          We are here to support{" "}
+          Kami hadir untuk mendampingi setiap langkah{" "}
           <Text as={"span"} color="brand.blue">
-            vulnerable
-          </Text>{" "}
-          communities.
+            muliamu.
+          </Text>
         </Text>
         <Button
           size={{ base: "md", md: "lg" }}

@@ -33,7 +33,7 @@ const ActivityCard = ({
         >
           {author}
         </Text>
-        <Text fontSize="sm" color="brand.gray">
+        <Text fontSize="sm" color="brand.grayDark">
           {description}
         </Text>
         <Text fontSize="10px" mt={2}>

@@ -31,14 +31,18 @@ const ActivitySection = () => {
   return (
     <Box w="80vw" bg={"brand.white"} py={24} id="activity">
       <Text textAlign="center" fontSize={36} fontWeight={"bold"}>
-        Stay Up To{" "}
+        Ikuti Perkembangan{" "}
         <Text as="span" color="brand.blue">
-          Date
+          Terbaru
         </Text>
       </Text>
-      <Text textAlign="center" color="brand.darkGray" mt={8} fontSize={24}>
-        Mattis et aliquam fermentum sed sagittis eu elit mauris. Nisl eros vel
-        neque vitae lorem molestie.
+      <Text
+        textAlign="center"
+        color="brand.grayDark"
+        mt={8}
+        fontSize={{ base: 16, lg: 20 }}
+      >
+        Transparansi donasi yang dapat dipantau setiap saat
       </Text>
       <Flex
         justifyContent={"space-between"}
@@ -49,12 +53,12 @@ const ActivitySection = () => {
       >
         <Box>
           <Text fontSize={32} fontWeight={700}>
-            Ensuring medicine for all the children.
+            Memastikan tersedianya obat-obatan untuk semua anak.
           </Text>
-          <Text color="brand.darkgray" mt={16}>
-            Facilisis diam ac augue lorem placerat dignissim feugiat amet orci.
-            Urna, ante blandit diam in dui, nulla praesent. Dignissim feugiat
-            amet orci. Urna,
+          <Text color="brand.grayDark" mt={16} fontSize={{ base: 16, lg: 20 }}>
+            Kami berkomitmen untuk memastikan setiap anak memiliki akses
+            terhadap obat-obatan yang layak demi kesehatan dan masa depan
+            mereka.
           </Text>
         </Box>
         <Image

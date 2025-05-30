@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, Button, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  CloseButton,
+  Drawer,
+  Flex,
+  Portal,
+} from "@chakra-ui/react";
 import { AlignJustifyIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +15,11 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [selectedMenu, setSelectedMenu] = useState("home");
+  const [open, setOpen] = useState(false);
 
   const handleSelectMenu = (menu) => {
     setSelectedMenu(menu);
+    setOpen(false);
   };
 
   return (
@@ -37,6 +46,7 @@ const Navbar = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
           display={{ base: "none", md: "flex" }}
+          flexDirection={{ lg: "row", base: "column" }}
         >
           <Link
             href={"#home"}
@@ -45,7 +55,7 @@ const Navbar = () => {
               color:
                 selectedMenu === "home"
                   ? "var(--se-colors-brand-blue)"
-                  : "black",
+                  : "var(--se-colors-brand-gray-dark)",
             }}
             onClick={() => handleSelectMenu("home")}
           >
@@ -58,7 +68,7 @@ const Navbar = () => {
               color:
                 selectedMenu === "about-us"
                   ? "var(--se-colors-brand-blue)"
-                  : "black",
+                  : "var(--se-colors-brand-gray-dark)",
             }}
             onClick={() => handleSelectMenu("about-us")}
           >
@@ -71,7 +81,7 @@ const Navbar = () => {
               color:
                 selectedMenu === "activity"
                   ? "var(--se-colors-brand-blue)"
-                  : "black",
+                  : "var(--se-colors-brand-gray-dark)",
             }}
             onClick={() => handleSelectMenu("activity")}
           >
@@ -84,7 +94,7 @@ const Navbar = () => {
               color:
                 selectedMenu === "contact"
                   ? "var(--se-colors-brand-blue)"
-                  : "black",
+                  : "var(--se-colors-brand-gray-dark)",
             }}
             onClick={() => handleSelectMenu("contact")}
           >
@@ -102,14 +112,104 @@ const Navbar = () => {
         >
           Donasi Sekarang
         </Button>
-        <Button
-          display={{ base: "flex", md: "none" }}
-          w="40px"
-          colorPalette={"brand.blue"}
-          borderRadius="50%"
+        <Drawer.Root
+          size={"xs"}
+          open={open}
+          onOpenChange={(e) => setOpen(e.open)}
         >
-          <AlignJustifyIcon />
-        </Button>
+          <Drawer.Trigger asChild>
+            <Button
+              display={{ base: "flex", md: "none" }}
+              w="40px"
+              colorPalette={"brand.blue"}
+              borderRadius="50%"
+            >
+              <AlignJustifyIcon />
+            </Button>
+          </Drawer.Trigger>
+          <Portal>
+            <Drawer.Backdrop />
+            <Drawer.Positioner>
+              <Drawer.Content>
+                <Drawer.Header>
+                  <Image
+                    width={50}
+                    height={50}
+                    src="/assets/images/logo.png"
+                    alt="logo"
+                  />
+                </Drawer.Header>
+                <Drawer.Body>
+                  <Flex flexDirection={"column"} gap={4}>
+                    <Link
+                      href={"#home"}
+                      style={{
+                        color:
+                          selectedMenu === "home"
+                            ? "var(--se-colors-brand-blue)"
+                            : "var(--se-colors-brand-gray-dark)",
+                      }}
+                      onClick={() => handleSelectMenu("home")}
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href={"#about-us"}
+                      style={{
+                        color:
+                          selectedMenu === "about-us"
+                            ? "var(--se-colors-brand-blue)"
+                            : "var(--se-colors-brand-gray-dark)",
+                      }}
+                      onClick={() => handleSelectMenu("about-us")}
+                    >
+                      About
+                    </Link>
+                    <Link
+                      href={"#activity"}
+                      style={{
+                        color:
+                          selectedMenu === "activity"
+                            ? "var(--se-colors-brand-blue)"
+                            : "var(--se-colors-brand-gray-dark)",
+                      }}
+                      onClick={() => handleSelectMenu("activity")}
+                    >
+                      Activity
+                    </Link>
+                    <Link
+                      href={"#contact"}
+                      style={{
+                        color:
+                          selectedMenu === "contact"
+                            ? "var(--se-colors-brand-blue)"
+                            : "var(--se-colors-brand-gray-dark)",
+                      }}
+                      onClick={() => handleSelectMenu("contact")}
+                    >
+                      Contact
+                    </Link>
+                  </Flex>
+                  <Button
+                    size={"md"}
+                    w={"full"}
+                    mt={8}
+                    fontWeight={"semibold"}
+                    colorPalette={"brand.blue"}
+                    onClick={() => {
+                      window.open("https://seikhlasnya.vercel.app/", "_blank");
+                    }}
+                  >
+                    Donasi Sekarang
+                  </Button>
+                </Drawer.Body>
+                <Drawer.CloseTrigger asChild>
+                  <CloseButton size="sm" />
+                </Drawer.CloseTrigger>
+              </Drawer.Content>
+            </Drawer.Positioner>
+          </Portal>
+        </Drawer.Root>
       </Flex>
     </Box>
   );
