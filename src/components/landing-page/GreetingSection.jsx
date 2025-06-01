@@ -6,7 +6,7 @@ import DonationForm from "./DonationForm";
 
 const GreetingSection = () => {
   return (
-    <Box w={"full"} position={"relative"} bg={"brand.white"} py={24} id="home">
+    <Box w={"full"} position={"relative"} bg={"brand.white"} py={36} id="home">
       <Image
         width={100}
         height={100}

@@ -37,8 +37,8 @@ const Navbar = () => {
         px={{ base: 8, md: 0 }}
       >
         <Image
-          width={70}
-          height={70}
+          width={60}
+          height={60}
           src="/assets/images/logo.png"
           alt="logo"
         />
