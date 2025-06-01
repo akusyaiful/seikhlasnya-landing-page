@@ -37,9 +37,10 @@ const Footer = () => {
         <Flex
           alignItems={"center"}
           justifyContent={"space-between"}
+          gap={4}
           mt={16}
           borderTop={"2px solid white"}
-          flexDirection={{ md: "row", base: "column" }}
+          flexDirection={{ xl: "row", base: "column" }}
           pt={2}
         >
           <Flex alignItems={"center"} gap={8}>
@@ -80,28 +81,66 @@ const Footer = () => {
               Contact
             </Link>
           </Flex>
-          <Flex alignItems={"center"} gap={4}>
+          <Flex
+            alignItems={"center"}
+            gap={{ base: 2, lg: 4 }}
+            flexDirection={{ lg: "row", base: "column" }}
+          >
             <Button variant="plain">
-              <LuInstagram
-                color="white"
-                onClick={() => {
-                  window.open(
-                    "https://www.instagram.com/musyafa_619/",
-                    "_blank"
-                  );
-                }}
-              />
+              <Flex alignItems={"center"} gap={2}>
+                <LuInstagram
+                  color="white"
+                  onClick={() => {
+                    window.open(
+                      "https://www.instagram.com/ainaya.d_/",
+                      "_blank"
+                    );
+                  }}
+                />
+                <Text color="white">Ainaya Dewi F</Text>
+              </Flex>
             </Button>
             <Button variant="plain">
-              <LuLinkedin
-                color="white"
-                onClick={() => {
-                  window.open(
-                    "https://www.linkedin.com/in/muhammad-syaifullah29/",
-                    "_blank"
-                  );
-                }}
-              />
+              <Flex alignItems={"center"} gap={2}>
+                <LuInstagram
+                  color="white"
+                  onClick={() => {
+                    window.open(
+                      "https://www.instagram.com/musyafa_619/",
+                      "_blank"
+                    );
+                  }}
+                />
+                <Text color="white">Khoirul Musyafa</Text>
+              </Flex>
+            </Button>
+            <Button variant="plain">
+              <Flex alignItems={"center"} gap={2}>
+                <LuInstagram
+                  color="white"
+                  onClick={() => {
+                    window.open(
+                      "https://www.instagram.com/ihsanmoes/",
+                      "_blank"
+                    );
+                  }}
+                />
+                <Text color="white">M Ihsan Mushaffa</Text>
+              </Flex>
+            </Button>
+            <Button variant="plain">
+              <Flex alignItems={"center"} gap={2}>
+                <LuInstagram
+                  color="white"
+                  onClick={() => {
+                    window.open(
+                      "https://www.instagram.com/msyaifllh_/",
+                      "_blank"
+                    );
+                  }}
+                />
+                <Text color="white">Muhammad Syaifullah</Text>
+              </Flex>
             </Button>
           </Flex>
         </Flex>
