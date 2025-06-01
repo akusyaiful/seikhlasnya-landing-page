@@ -5,21 +5,19 @@ import {
   Spinner,
   Text,
   useSelectContext,
-} from '@chakra-ui/react';
-import Image from 'next/image';
+} from "@chakra-ui/react";
+import Image from "next/image";
 
 const SelectValue = ({ placeholder }) => {
   const select = useSelectContext();
   const items = select.selectedItems;
-
-  //TODO: Handle multiple values
 
   if (!select?.selectedItems?.[0]) {
     return <Select.ValueText placeholder={placeholder} />;
   }
   return (
     <Select.ValueText alignItems="center" placeholder={placeholder}>
-      <Flex gap={2} alignItems="center" justifyContent={'center'}>
+      <Flex gap={2} alignItems="center" justifyContent={"center"}>
         {items?.[0]?.image && (
           <Flex
             bg="brand.white"
@@ -37,7 +35,7 @@ const SelectValue = ({ placeholder }) => {
           </Flex>
         )}
 
-        <Text fontWeight={'medium'}>{items?.[0]?.label}</Text>
+        <Text fontWeight={"medium"}>{items?.[0]?.label}</Text>
       </Flex>
     </Select.ValueText>
   );
@@ -70,30 +68,6 @@ export const SimpleSelect = ({
           <Select.Indicator />
         </Select.IndicatorGroup>
       </Select.Control>
-      <Portal>
-        <Select.Positioner>
-          <Select.Content>
-            {collection.items.map((option) => (
-              <Select.Item key={option.value} item={option}>
-                <Flex gap={2} alignItems="center">
-                  {option.image && (
-                    <Flex h="30px" px={2} alignItems="center">
-                      <Image
-                        alt={option.label}
-                        src={option.image}
-                        width={40}
-                        height={30}
-                      />
-                    </Flex>
-                  )}
-                  <Text>{option.label}</Text>
-                </Flex>
-                <Select.ItemIndicator />
-              </Select.Item>
-            ))}
-          </Select.Content>
-        </Select.Positioner>
-      </Portal>
     </Select.Root>
   );
 };

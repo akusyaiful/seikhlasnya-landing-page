@@ -2,6 +2,7 @@
 
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import DonationForm from "./DonationForm";
 
 const GreetingSection = () => {
   return (
@@ -69,12 +70,7 @@ const GreetingSection = () => {
                 Donasi Sekarang
               </Button>
             </Box>
-            <Image
-              width={1800}
-              height={1800}
-              src="/assets/images/form-donation.png"
-              alt="logo"
-            />
+            <DonationForm />
           </Flex>
         </Box>
       </Flex>

@@ -46,7 +46,7 @@ const Navbar = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
           display={{ base: "none", md: "flex" }}
-          flexDirection={{ lg: "row", base: "column" }}
+          flexDirection={{ md: "row", base: "column" }}
         >
           <Link
             href={"#home"}

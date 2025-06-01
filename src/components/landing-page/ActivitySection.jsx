@@ -55,7 +55,11 @@ const ActivitySection = () => {
           <Text fontSize={32} fontWeight={700}>
             Memastikan tersedianya obat-obatan untuk semua anak.
           </Text>
-          <Text color="brand.grayDark" mt={16} fontSize={{ base: 16, lg: 20 }}>
+          <Text
+            color="brand.grayDark"
+            mt={{ base: 4, md: 8 }}
+            fontSize={{ base: 16, lg: 20 }}
+          >
             Kami berkomitmen untuk memastikan setiap anak memiliki akses
             terhadap obat-obatan yang layak demi kesehatan dan masa depan
             mereka.
